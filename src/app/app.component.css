@@ -1,0 +1,20 @@
+.sidebar {
+  background-color: #010a14;
+  min-width: 95px;
+  max-width: 95px;
+  min-height: 100vh;
+}
+.sidebar .li {
+  color: #808080 !important;
+}
+.sidebar .li.active {
+  color: #3b85da !important;
+}
+.sidebar .li:hover {
+  color: #3b85da !important;
+}
+.bg-shadow {
+  -webkit-box-shadow: 2px 4px 15px -3px rgba(80, 123, 172);
+  -moz-box-shadow: 2px 4px 15px -3px rgb(80, 123, 172);
+  box-shadow: 2px 4px 15px -3px rgb(80, 123, 172);
+}
