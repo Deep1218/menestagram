@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <!-- <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Stories</span>
+    </div>
+  </nav> -->
+  <div class="shadow py-4 d-flex justify-content-center">
+    <ngx-slick-carousel
+      class="carousel position-relative me-2"
+      #slickModal="slick-carousel"
+      [config]="slideConfig"
+    >
+      <div ngxSlickItem *ngFor="let slide of users" class="slide">
+        <app-story
+          [imgUrl]="slide.pic"
+          [username]="slide.username"
+          [active]="slide.active"
+        ></app-story>
+      </div>
+    </ngx-slick-carousel>
+  </div>
+</div>

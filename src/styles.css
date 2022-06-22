@@ -4,3 +4,11 @@ body {
   margin: 0;
   padding: 0;
 }
+.slick-slider {
+  width: 85%;
+  transform: translateX(-3rem);
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
