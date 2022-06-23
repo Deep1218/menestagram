@@ -1,1 +1,142 @@
-<div class="col"></div>
+<!-- <div class="col-4 border"> -->
+<div
+  class="card mb-4 rounded card-hover"
+  [ngClass]="{ 'shadow-lg': hoverOn, 'border-0': hoverOn }"
+  style="cursor: pointer; border-top: 5px solid orange !important"
+  (mouseenter)="hoverOn = true"
+  (mouseleave)="hoverOn = false"
+>
+  <div class="card-body p-0">
+    <div class="col-12 p-2 border-bottom">
+      <div class="row ms-2 align-items-center">
+        <div class="col-1">
+          <div
+            class="d-flex flex-column justify-content-center align-items-center mx-2"
+          >
+            <div class="position-relative story-circle">
+              <img
+                src="assets/img/download2.jpg"
+                alt="userProfile"
+                class="img-fluid rounded-circle border"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-10">
+          <div class="d-flex flex-column mx-2 justify-content-start">
+            <p class="mb-0 fw-bold" style="font-size: 20px">the_unkown</p>
+            <p class="text-mute mb-0" style="font-size: 12px">17 hours ago</p>
+          </div>
+        </div>
+        <div class="col-1">
+          <p class="mb-0"><fa-icon [icon]="faEllipsisV"></fa-icon></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 p-2">
+      <div
+        class="px-2 d-flex justify-content-center align-items-center"
+        style="height: 100%"
+      >
+        <img
+          src="assets/img/menestagram-logo.png"
+          class="card-img-top"
+          alt="..."
+        />
+      </div>
+    </div>
+    <div class="col-12 p-2 border-top">
+      <div class="d-flex justify-content-between align-items-center">
+        <div>
+          <fa-icon [icon]="faHeart" class="fs-3 mx-2"></fa-icon>
+          <fa-icon [icon]="faComment" class="fs-3 mx-2"></fa-icon>
+          <fa-icon [icon]="faPaperPlane" class="fs-3 mx-2"></fa-icon>
+        </div>
+        <div>
+          <fa-icon [icon]="faBookmark" class="fs-3 mx-2"></fa-icon>
+        </div>
+      </div>
+      <div class="inline-block my-1 mx-2">
+        <span class="fw-bold">1,000 Likes</span>
+      </div>
+      <div class="inline-block mt-1 mx-2">
+        <a href="#" class="text-decoration-none">
+          <span class="text-muted">View all 232 comments</span>
+        </a>
+      </div>
+    </div>
+    <div class="col-12 p-2 border-top">
+      <div class="d-flex align-items-center">
+        <div>
+          <div
+            class="d-flex flex-column justify-content-center align-items-center mx-2"
+          >
+            <div class="position-relative story-circle2">
+              <img
+                src="assets/img/download2.jpg"
+                alt="userProfile"
+                class="img-fluid rounded-circle border"
+              />
+            </div>
+          </div>
+        </div>
+        <form style="width: 100%">
+          <div class="input-group flex-nowrap">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Add a comment..."
+              aria-label="Username"
+              aria-describedby="addon-wrapping"
+            />
+            <span class="input-group-text" id="addon-wrapping"
+              ><fa-icon [icon]="faPaperclip"></fa-icon
+            ></span>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">
+      This is a wider card with supporting text below as a natural lead-in to
+      additional content. This content is a little bit longer.
+    </p>
+    <p class="card-text">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </p> -->
+  </div>
+</div>
+<!-- </div> -->
+<!-- <div class="row">
+    <div class="col-12 border">
+      <div class="row">
+        <div class="col-1">
+          <div
+            class="d-flex flex-column justify-content-center align-items-center mx-2"
+          >
+            <div class="position-relative story-circle">
+              <img
+                src="assets/img/download2.jpg"
+                alt="userProfile"
+                class="img-fluid rounded-circle border"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-10">
+          <div class="d-flex flex-column mx-2 justify-content-start">
+            <p class="mb-0">the_unkown</p>
+            <p class="text-mute mb-0">17 hours ago</p>
+          </div>
+        </div>
+        <div class="col-1">
+          <p class="mb-0"><fa-icon [icon]="faEllipsisV"></fa-icon></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12"></div>
+    <div class="col-12"></div>
+    <div class="col-12"></div>
+  </div> -->
