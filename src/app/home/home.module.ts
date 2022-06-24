@@ -8,6 +8,7 @@ import { HomeComponent } from './home.component';
 import { StoryCardComponent } from '../components/story-card/story-card.component';
 import { StoryComponent } from '../components/story/story.component';
 import { FeedCardComponent } from '../components/feed-card/feed-card.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FeedCardComponent } from '../components/feed-card/feed-card.component';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     HomeRoutingModule,
     SlickCarouselModule,
     FontAwesomeModule,
