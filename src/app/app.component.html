@@ -24,11 +24,25 @@
           ngbTooltip="Home"
         >
           <a
-            class="li active text-decoration-none text-black-50"
+            class="li text-decoration-none text-black-50"
             routerLink="/home"
             role="button"
           >
             <fa-icon [icon]="faHouseChimney"></fa-icon>
+          </a>
+        </li>
+        <li
+          class="li my-5 fs-3"
+          role="button"
+          placement="right"
+          ngbTooltip="Search"
+        >
+          <a
+            class="li active text-decoration-none text-black-50"
+            routerLink="/publicFeed"
+            role="button"
+          >
+            <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
           </a>
         </li>
         <li
@@ -43,20 +57,6 @@
             role="button"
           >
             <fa-icon [icon]="faPaperPlane"></fa-icon>
-          </a>
-        </li>
-        <li
-          class="li my-5 fs-3"
-          role="button"
-          placement="right"
-          ngbTooltip="Search"
-        >
-          <a
-            class="li text-decoration-none text-black-50"
-            routerLink="/"
-            role="button"
-          >
-            <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
           </a>
         </li>
         <li
