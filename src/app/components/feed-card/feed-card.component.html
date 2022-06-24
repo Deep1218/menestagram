@@ -1,8 +1,7 @@
-<!-- <div class="col-4 border"> -->
 <div
   class="card mb-4 rounded card-hover"
   [ngClass]="{ 'shadow-lg': hoverOn, 'border-0': hoverOn }"
-  style="cursor: pointer; border-top: 5px solid orange !important"
+  style="border-top: 5px solid orange !important"
   (mouseenter)="hoverOn = true"
   (mouseleave)="hoverOn = false"
 >
@@ -29,11 +28,13 @@
           </div>
         </div>
         <div class="col-1">
-          <p class="mb-0"><fa-icon [icon]="faEllipsisV"></fa-icon></p>
+          <p class="mb-0 fs-3">
+            <fa-icon [icon]="faEllipsisV"></fa-icon>
+          </p>
         </div>
       </div>
     </div>
-    <div class="col-12 p-2">
+    <div class="col-12 p-2" style="cursor: pointer">
       <div
         class="px-2 d-flex justify-content-center align-items-center"
         style="height: 100%"
@@ -89,54 +90,16 @@
               aria-label="Username"
               aria-describedby="addon-wrapping"
             />
-            <span class="input-group-text" id="addon-wrapping"
-              ><fa-icon [icon]="faPaperclip"></fa-icon
-            ></span>
+            <button
+              class="input-group-text btn-primary btn"
+              id="addon-wrapping"
+              type="submit"
+            >
+              <fa-icon [icon]="faPaperclip"></fa-icon>
+            </button>
           </div>
         </form>
       </div>
     </div>
-
-    <!--
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">
-      This is a wider card with supporting text below as a natural lead-in to
-      additional content. This content is a little bit longer.
-    </p>
-    <p class="card-text">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </p> -->
   </div>
 </div>
-<!-- </div> -->
-<!-- <div class="row">
-    <div class="col-12 border">
-      <div class="row">
-        <div class="col-1">
-          <div
-            class="d-flex flex-column justify-content-center align-items-center mx-2"
-          >
-            <div class="position-relative story-circle">
-              <img
-                src="assets/img/download2.jpg"
-                alt="userProfile"
-                class="img-fluid rounded-circle border"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="col-10">
-          <div class="d-flex flex-column mx-2 justify-content-start">
-            <p class="mb-0">the_unkown</p>
-            <p class="text-mute mb-0">17 hours ago</p>
-          </div>
-        </div>
-        <div class="col-1">
-          <p class="mb-0"><fa-icon [icon]="faEllipsisV"></fa-icon></p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12"></div>
-    <div class="col-12"></div>
-    <div class="col-12"></div>
-  </div> -->
