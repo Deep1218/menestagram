@@ -1,0 +1,38 @@
+<div
+  class="d-flex flex-cloumn position-relative rounded m-2 px-3 border"
+  style="width: 450px"
+>
+  <div class="row align-items-center p-2">
+    <div class="col-2 rounded">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="position-relative border story-circle p-1 rounded-circle">
+          <img src="{{ userPic }}" alt="..." class="img-fluid rounded-circle" />
+        </div>
+      </div>
+    </div>
+    <div class="col mx-2">
+      <div class="d-flex flex-column">
+        <div class="fs-4 fw-bold">{{ username }}</div>
+        <div class="mt-1 text-small text-muted">
+          Followed by
+          <div class="d-flex">
+            <p
+              class="text-primary mb-0 mx-1"
+              role="button"
+              *ngFor="let follow of following"
+            >
+              {{ follow.username }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-2 position-absolute top-0 end-0 mt-2">
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-sm btn-outline-primary">
+          {{ btnText }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

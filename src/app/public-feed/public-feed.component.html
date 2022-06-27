@@ -4,5 +4,36 @@
       <app-search></app-search>
     </div>
   </nav>
-  <div class="row p-4 mx-4"></div>
+  <div class="row p-4 mx-4">
+    <div class="card border-0">
+      <div class="card-body">
+        <h5 class="card-title fw-bold fs-4">Suggested</h5>
+        <ngx-slick-carousel
+          class="carousel ms-5 w-100"
+          #slickModal="slick-carousel"
+          [config]="slideConfig"
+        >
+          <div ngxSlickItem *ngFor="let slide of data" class="slide">
+            <app-suggestion-card
+              [userPic]="slide.userPic"
+              [username]="slide.username"
+              [following]="slide.following"
+              [btnText]="'Follow'"
+            ></app-suggestion-card>
+          </div>
+        </ngx-slick-carousel>
+      </div>
+    </div>
+  </div>
 </div>
+
+<!-- <div class="row">
+            <app-suggestion-card
+              *ngFor="let slide of data"
+              [userPic]="slide.userPic"
+              [username]="slide.username"
+              [following]="slide.following"
+              [btnText]="'Follow'"
+              class="d-flex position-relative rounded m-2 border"
+            ></app-suggestion-card>
+          </div> -->
