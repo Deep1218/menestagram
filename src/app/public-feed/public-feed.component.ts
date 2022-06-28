@@ -10,35 +10,57 @@ export class PublicFeedComponent implements OnInit {
     arrows: false,
     infinite: false,
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 2,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1700,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
+          slidesToScroll: 2,
+          infinite: false,
           dots: true,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 1300,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+          infinite: false,
+          dots: true,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 992,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          infinite: false,
+          dots: true,
         },
       },
     ],
   };
   data = [
+    {
+      follow: 0,
+      userPic: 'assets/img/download2.jpg',
+      username: 'the_unknow',
+      following: [{ username: 'the_deeppatel' }, { username: 'patel_deep' }],
+    },
+    {
+      follow: 0,
+      userPic: 'assets/img/download2.jpg',
+      username: 'the_unknow',
+      following: [{ username: 'the_deeppatel' }, { username: 'patel_deep' }],
+    },
+    {
+      follow: 0,
+      userPic: 'assets/img/download2.jpg',
+      username: 'the_unknow',
+      following: [{ username: 'the_deeppatel' }, { username: 'patel_deep' }],
+    },
     {
       follow: 0,
       userPic: 'assets/img/download2.jpg',
