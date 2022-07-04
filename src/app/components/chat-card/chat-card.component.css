@@ -1,0 +1,11 @@
+.story-circle {
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid #888585 !important;
+  padding: 1px;
+}
+.story-circle.active {
+  border: 2px solid #e84118 !important;
+}

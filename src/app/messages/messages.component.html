@@ -10,28 +10,15 @@
         </div>
         <!-- chat list -->
         <div class="col-12">
-          <div class="border bg-white" style="height: 780px">
-            <div
-              class="d-flex w-100 align-items-center justify-content-center p-2"
-            >
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="position-relative story-circle2">
-                  <img
-                    src="assets/img/download2.jpg"
-                    alt="..."
-                    class="img-fluid rounded-circle"
-                  />
-                </div>
-              </div>
-              <div class="d-flex flex-column w-100 px-3">
-                <span class="fw-bold fs-5">the_unknow2</span>
-                <span class="text-small text-muted">How are you?</span>
-              </div>
-              <div class="d-flex flex-column text-center w-25 ps-2">
-                <span class="fw-bold">9:50<span>am</span></span>
-                <span class="fw-bold">badge</span>
-              </div>
-            </div>
+          <div class="border bg-white" style="height: 780px; overflow-y: auto">
+            <app-chat-card
+              *ngFor="let chat of chatUser"
+              [img]="chat.pic"
+              [time]="chat.lastTime.getMinutes()"
+              [name]="chat.username"
+              [totalMsg]="chat.newMsg"
+              [message]="chat.message"
+            ></app-chat-card>
           </div>
         </div>
       </div>
@@ -41,45 +28,34 @@
       <div class="row gy-2">
         <!-- User Profile (Receiver) -->
         <div class="col-12">
-          <div class="row border m-0 bg-light align-items-center">
-            <!-- Pic -->
-            <div class="col-1">
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="position-relative story-circle">
-                  <img
-                    src="assets/img/download2.jpg"
-                    alt="..."
-                    class="img-fluid rounded-circle"
-                  />
-                </div>
-              </div>
-            </div>
-            <!-- Name -->
-            <div class="col">
-              <p class="mb-0 fs-5 fw-bold">the_unknow</p>
-              <p class="mb-0 text-muted text-small">
-                last seen <span>3 min ago</span>
-              </p>
-            </div>
-            <!-- Other action -->
-            <div class="col-2">
-              <div class="d-flex justify-content-evenly align-items-center">
-                <span class="mx-2 fs-4"
-                  ><fa-icon [icon]="faPhone"></fa-icon
-                ></span>
-                <span class="mx-2 fs-4"
-                  ><fa-icon [icon]="faVideo"></fa-icon
-                ></span>
-                <span class="mx-2 fs-4"
-                  ><fa-icon [icon]="faCircleInfo"></fa-icon
-                ></span>
-              </div>
-            </div>
-          </div>
+          <app-chat-user></app-chat-user>
         </div>
         <!-- 820px -->
         <div class="col-12">
-          <div class="border" style="height: 780px">Working</div>
+          <div class="border" style="height: 780px">
+            <div class="row">
+              <div class="col-12">
+                <form class="d-flex algin-content-center border">
+                  <div class="position-relative w-75">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Write a message..."
+                    />
+                    <span class="btn position-absolute start-0 top-0"
+                      ><fa-icon [icon]="faPaperclip"></fa-icon
+                    ></span>
+                    <button
+                      type="submit"
+                      class="btn text-primary fw-bold ms-5 position-absolute end-0 top-0"
+                    >
+                      Send
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
