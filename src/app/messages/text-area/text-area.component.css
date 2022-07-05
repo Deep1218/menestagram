@@ -1,0 +1,17 @@
+.chat-input {
+  resize: none;
+}
+.chat-input::content {
+  padding-left: 2.5rem;
+  padding-right: 4.2rem;
+}
+.chat-input.scroll {
+  /* scroll-padding-right: 4.2rem; */
+  height: 3.5rem;
+}
+.chat-input.scroll::content {
+  padding-top: 0.9rem;
+}
+.chat-input::-webkit-scrollbar {
+  display: none;
+}

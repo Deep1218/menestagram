@@ -1,0 +1,24 @@
+<div class="position-relative">
+  <textarea
+    class="form-control chat-input"
+    [ngClass]="{ scroll: false }"
+    type="textarea"
+    placeholder="Write a message..."
+    rows="1"
+    wrap="soft"
+  ></textarea>
+  <span
+    class="btn position-absolute start-0 top-0"
+    [ngClass]="{
+      'top-50': false,
+      'translate-middle-y': false
+    }"
+    ><fa-icon [icon]="faPaperclip"></fa-icon
+  ></span>
+  <button
+    type="submit"
+    class="btn text-primary fw-bold ms-5 position-absolute end-0 top-50 translate-middle-y"
+  >
+    Send
+  </button>
+</div>
