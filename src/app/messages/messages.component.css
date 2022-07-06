@@ -1,15 +1,3 @@
-.story-circle {
-  cursor: pointer;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  padding: 1px;
-}
-.rounded-custom-left {
-  border-radius: 0.65rem;
-  border-top-left-radius: 0 !important;
-}
-.rounded-custom-right {
-  border-radius: 0.65rem;
-  border-top-right-radius: 0 !important;
+::-webkit-scrollbar {
+  display: none;
 }

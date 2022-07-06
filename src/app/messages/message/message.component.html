@@ -1,5 +1,5 @@
 <div
-  class="col-12 d-flex algin-items-center px-4 py-2"
+  class="col-12 d-flex algin-items-center px-3 py-2"
   [ngClass]="{ 'justify-content-end': send }"
 >
   <div class="d-flex justify-content-center text-center" *ngIf="receive">
@@ -13,12 +13,9 @@
     </div>
   </div>
   <div
-    class="d-flex flex-column border"
+    class="d-flex flex-column"
     [ngClass]="{
-      'mx-3': receive,
-      'mb-3': send,
-      'justify-content-start': receive,
-      'justify-content-center': send
+      'mx-3': receive
     }"
   >
     <div
