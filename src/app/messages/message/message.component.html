@@ -1,0 +1,55 @@
+<div
+  class="col-12 d-flex algin-items-center px-4 py-2"
+  [ngClass]="{ 'justify-content-end': send }"
+>
+  <div class="d-flex justify-content-center text-center" *ngIf="receive">
+    <div class="position-relative border story-circle">
+      <img
+        src="assets/img/download2.jpg"
+        alt="..."
+        class="img-fluid rounded-circle"
+      />
+      <span class="fw-bold">9:00</span>
+    </div>
+  </div>
+  <div
+    class="d-flex flex-column border"
+    [ngClass]="{
+      'mx-3': receive,
+      'mb-3': send,
+      'justify-content-start': receive,
+      'justify-content-center': send
+    }"
+  >
+    <div
+      class="d-flex mb-3"
+      [ngClass]="{
+        'justify-content-start': receive,
+        'justify-content-end': send
+      }"
+    >
+      <span
+        class="inline-display p-2 text-white"
+        [ngClass]="{
+          'rounded-custom-left': receive,
+          'rounded-custom-right': send,
+          'bg-primary': receive,
+          'bg-success': send
+        }"
+        >Hii</span
+      >
+    </div>
+    <div class="d-flex justify-content-start mb-3">
+      <span
+        class="inline-display p-2 text-white"
+        [ngClass]="{
+          'rounded-custom-left': receive,
+          'rounded-custom-right': send,
+          'bg-primary': receive,
+          'bg-success': send
+        }"
+        >How are you?</span
+      >
+    </div>
+  </div>
+</div>
