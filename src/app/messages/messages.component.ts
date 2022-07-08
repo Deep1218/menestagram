@@ -29,7 +29,29 @@ export class MessagesComponent implements OnInit {
       lastTime: new Date(),
     },
   ];
-
+  userChats = [
+    {
+      userPic: 'assets/img/download2.jpg',
+      userType: 'receive',
+      time: new Date(),
+      messages: [{ msg: 'Hii' }, { msg: 'How are you ?' }],
+    },
+    {
+      userPic: 'assets/img/download2.jpg',
+      userType: 'sender',
+      time: new Date(),
+      messages: [{ msg: 'Hii' }, { msg: 'Fine' }],
+    },
+    {
+      userPic: 'assets/img/download2.jpg',
+      userType: 'receive',
+      time: new Date(),
+      messages: [
+        { msg: 'Great!!!' },
+        { msg: 'Long time no connection. What you are doing a days?' },
+      ],
+    },
+  ];
   constructor() {}
 
   ngOnInit(): void {}

@@ -1,4 +1,7 @@
-<div class="d-flex w-100 align-items-center justify-content-center p-2">
+<li
+  class="d-flex w-100 align-items-center justify-content-center p-2 rounded border my-2"
+  [ngClass]="{ 'bg-light': false }"
+>
   <div class="d-flex justify-content-center align-items-center">
     <div class="position-relative story-circle">
       <img src="{{ img }}" alt="..." class="img-fluid rounded-circle" />
@@ -14,4 +17,4 @@
       ><span class="badge bg-success">{{ totalMsg }}</span></span
     >
   </div>
-</div>
+</li>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-message',
@@ -8,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class MessageComponent implements OnInit {
   send!: boolean;
   receive!: boolean;
+
+  @Input() userPic!: string;
+  @Input() userType!: string;
+  @Input() msgTime!: Date;
+  @Input() messages!: Array<any>;
+
   constructor() {}
 
   ngOnInit(): void {
-    this.receive = false;
-    this.send = true;
+    if (this.userType == 'receive') {
+      this.receive = true;
+    } else {
+      this.receive = false;
+    }
+    this.send = !this.receive;
   }
 }

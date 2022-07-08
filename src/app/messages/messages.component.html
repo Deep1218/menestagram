@@ -10,7 +10,10 @@
         </div>
         <!-- chat list -->
         <div class="col-12">
-          <div class="border bg-white" style="height: 780px; overflow-y: auto">
+          <ul
+            class="bg-white list-unstyled"
+            style="height: 780px; overflow-y: auto"
+          >
             <app-chat-card
               *ngFor="let chat of chatUser"
               [img]="chat.pic"
@@ -19,7 +22,7 @@
               [totalMsg]="chat.newMsg"
               [message]="chat.message"
             ></app-chat-card>
-          </div>
+          </ul>
         </div>
       </div>
     </div>
@@ -30,15 +33,24 @@
         <div class="col-12">
           <app-chat-user></app-chat-user>
         </div>
-        <!-- 820px -->
         <div class="col-12">
-          <div class="border position-relative" style="height: 780px">
-            <div class="row" style="overflow-y: auto">
-              <!-- receive -->
-              <app-message></app-message>
-              <!-- send -->
-              <app-message></app-message>
+          <div
+            class="border position-relative"
+            style="height: 770px; overflow-y: auto"
+          >
+            <div class="row my-2">
+              <app-message
+                *ngFor="let chat of userChats"
+                [userPic]="chat.userPic"
+                [userType]="chat.userType"
+                [messages]="chat.messages"
+                [msgTime]="chat.time"
+              ></app-message>
             </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="position-relative">
             <div class="row mt-5 w-100 position-absolute bottom-0 m-0">
               <div class="col-12 p-0">
                 <form class="d-flex algin-content-center">
