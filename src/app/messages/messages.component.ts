@@ -48,11 +48,19 @@ export class MessagesComponent implements OnInit {
       time: new Date(),
       messages: [
         { msg: 'Great!!!' },
-        { msg: 'Long time no connection. What you are doing a days?' },
+        { msg: 'Long time no connection. What are you doing now a days?' },
       ],
     },
   ];
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (!localStorage.getItem('clickedId')) {
+      localStorage.setItem('clickedId', '1');
+    }
+  }
+
+  onClicked(id: string) {
+    localStorage.setItem('clickedId', JSON.stringify(id));
+  }
 }

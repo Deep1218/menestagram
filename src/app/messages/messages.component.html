@@ -15,12 +15,14 @@
             style="height: 780px; overflow-y: auto"
           >
             <app-chat-card
-              *ngFor="let chat of chatUser"
+              *ngFor="let chat of chatUser; let i = index"
               [img]="chat.pic"
               [time]="chat.lastTime.getMinutes()"
               [name]="chat.username"
               [totalMsg]="chat.newMsg"
               [message]="chat.message"
+              [itemId]="i + 1"
+              (onClick)="onClicked($event)"
             ></app-chat-card>
           </ul>
         </div>
