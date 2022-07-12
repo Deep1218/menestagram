@@ -1,6 +1,5 @@
-.search-input {
-  /* border-radius: 50px !important; */
-  /* width: 550px; */
+.round {
+  border-radius: 50px !important;
 }
 .search-input::content {
   padding-left: 2.5rem;
