@@ -4,7 +4,8 @@
   (ngSubmit)="onSubmit()"
 >
   <input
-    class="form-control search-input"
+    class="form-control"
+    [ngStyle]="{ 'border-radius': rounded }"
     type="text"
     placeholder="Search..."
     formControlName="search"

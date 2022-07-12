@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { faXmark, faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -8,9 +8,10 @@ import { faXmark, faSearch } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
+  @Input() rounded!: boolean;
+
   faSearch = faSearch;
   faXmark = faXmark;
-
   searchForm: FormGroup;
 
   constructor(private fb: FormBuilder) {

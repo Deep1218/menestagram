@@ -10,6 +10,8 @@ import { StoryComponent } from './story/story.component';
 import { SearchComponent } from './search/search.component';
 import { FeedCardComponent } from './feed-card/feed-card.component';
 import { ChatCardComponent } from './chat-card/chat-card.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,12 @@ import { ChatCardComponent } from './chat-card/chat-card.component';
     FeedCardComponent,
     ChatCardComponent,
   ],
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    ReactiveFormsModule,
+    SlickCarouselModule,
+  ],
   exports: [
     SuggestionCardComponent,
     StoryCardComponent,
