@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-messages',
   templateUrl: './messages.component.html',
   styleUrls: ['./messages.component.css'],
 })
-export class MessagesComponent implements OnInit {
+export class MessagesComponent implements OnInit, OnDestroy {
   chatUser = [
     {
       pic: 'assets/img/download2.jpg',
@@ -62,5 +62,8 @@ export class MessagesComponent implements OnInit {
 
   onClicked(id: string) {
     localStorage.setItem('clickedId', JSON.stringify(id));
+  }
+  ngOnDestroy(): void {
+    localStorage.removeItem('clickedId');
   }
 }
