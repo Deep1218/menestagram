@@ -9,20 +9,17 @@ import { StoryCardComponent } from '../components/story-card/story-card.componen
 import { StoryComponent } from '../components/story/story.component';
 import { FeedCardComponent } from '../components/feed-card/feed-card.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    StoryCardComponent,
-    StoryComponent,
-    FeedCardComponent,
-  ],
+  declarations: [HomeComponent],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     HomeRoutingModule,
     SlickCarouselModule,
     FontAwesomeModule,
+    ComponentsModule,
   ],
 })
 export class HomeModule {}
