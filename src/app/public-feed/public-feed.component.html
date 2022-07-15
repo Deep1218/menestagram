@@ -1,0 +1,28 @@
+<div class="cotainer" style="margin-left: calc(70px + 1.8rem)">
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid justify-content-center">
+      <app-search style="width: 550px" [rounded]="true"></app-search>
+    </div>
+  </nav>
+  <div class="row p-4 mx-4">
+    <div class="card border-0">
+      <div class="card-body">
+        <h5 class="card-title fw-bold fs-4">Suggested</h5>
+        <ngx-slick-carousel
+          class="carousel ms-5 w-100"
+          #slickModal="slick-carousel"
+          [config]="slideConfig"
+        >
+          <div ngxSlickItem *ngFor="let slide of data" class="slide">
+            <app-suggestion-card
+              [userPic]="slide.userPic"
+              [username]="slide.username"
+              [following]="slide.following"
+              [btnText]="'Follow'"
+            ></app-suggestion-card>
+          </div>
+        </ngx-slick-carousel>
+      </div>
+    </div>
+  </div>
+</div>

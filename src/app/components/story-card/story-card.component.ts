@@ -33,6 +33,7 @@ export class StoryCardComponent implements OnInit {
     { username: 'the_unknown', pic: 'assets/img/download2.jpg', active: true },
     { username: 'the_unknown', pic: 'assets/img/download2.jpg', active: false },
   ];
+
   slideConfig = {
     // arrows: true,
     infinite: false,

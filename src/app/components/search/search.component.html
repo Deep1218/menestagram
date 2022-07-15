@@ -1,0 +1,23 @@
+<form
+  [formGroup]="searchForm"
+  class="d-flex position-relative"
+  (ngSubmit)="onSubmit()"
+>
+  <input
+    class="form-control search-input round"
+    [ngClass]="{ round: rounded }"
+    type="text"
+    placeholder="Search..."
+    formControlName="search"
+    aria-label="Search"
+  />
+  <span class="position-absolute start-0 ms-3 mt-2"
+    ><fa-icon [icon]="faSearch"></fa-icon
+  ></span>
+  <span
+    class="position-absolute end-0 me-3 mt-2"
+    (click)="onClose()"
+    role="button"
+    ><fa-icon [icon]="faXmark" *ngIf="searchForm.get('search')?.valid"></fa-icon
+  ></span>
+</form>
