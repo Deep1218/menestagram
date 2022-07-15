@@ -18,6 +18,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./messages/messages.module').then((m) => m.MessagesModule),
   },
+  { path: 'settings', loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule) },
   { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 
